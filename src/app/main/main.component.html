@@ -1,0 +1,59 @@
+<!-- <h3>Main component works</h3>
+
+<app-about></app-about>
+<app-contact></app-contact>
+
+<app-databinding></app-databinding> -->
+<!-- <app-lifecycle></app-lifecycle> -->
+ <!-- <app-databinding></app-databinding> -->
+
+<!-- <a class="nav-link" routerLink='about'>About</a>
+<a class="nav-link" routerLink='home'>Home</a>
+<a class="nav-link" routerLink='addperson'>Person</a>
+<router-outlet>
+    
+</router-outlet> -->
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Admin Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink='home'>Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='about'>About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='users'>User </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='support'>Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='contact'>Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='databinding'>DataBinding </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='employees'>Employee </a>
+            </li>
+            
+
+        </ul>
+    </div>
+</nav>
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <router-outlet>
+            <!-- Content will be loaded here -->
+        </router-outlet>
+    </div>
+
+</main><!-- /.container -->

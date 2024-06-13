@@ -1,0 +1,54 @@
+<p>databinding works!</p>
+{{x}}
+
+<h3>Interpolatiom (controller to view)</h3>
+<div>
+    <h2>Username: {{customerObj.code}}</h2>
+    <h2>Usercode: {{customerObj.name}}</h2>
+    <h3>Amount: {{customerObj.amount}}</h3>
+</div>
+
+<h3>Interpolation (model to view)</h3>
+<div>
+    <h2>Username: {{customer.CustomerCode}}</h2>
+    <h2>UserCode: {{customer.CustomerName}}</h2>
+    <h2>Amount: {{customer.CustomerAmount}}</h2>
+</div>
+
+<hr/>
+<h2>One way binding with Interpolatiom</h2>
+One way binding happens from model to view
+<p>UserCode: <input type="text" name="CustomerCode" value="{{customer.CustomerCode}}"/></p>
+<p>UserName: <input type="text" name="CustomerName" value="{{customer.CustomerName}}"/></p>
+<p>UserCode: <input type="text" name="CustomerAmount" value="{{customer.CustomerAmount}}"/></p>
+
+<hr/>
+<h2>One way binding with Interpolatiom</h2>
+One way binding happens from model to view
+<p>UserCode: <input type="text" name="CustomerCode" [value]="customer.CustomerCode"/></p>
+<p>UserName: <input type="text" name="CustomerName" [value]="customer.CustomerName"/></p>
+<p>Amount: <input type="text" name="CustomerAmount" [value]="customer.CustomerAmount"/></p>
+
+<button (click) = "callMe()">Click Mex</button>
+
+<hr/>
+<h2>Two way data binding model to view and view to model</h2>
+<p>UserCode: <input type="text" name="CustomerCode" [(ngModel)]="customer.CustomerCode"/></p>
+<p>UserName: <input type="text" name="CustomerName" [(ngModel)]="customer.CustomerName"/></p>
+<p>Amount: <input type="text" name="CustomerAmount" [(ngModel)]="customer.CustomerAmount"/></p>
+
+<p>UserCode: <input type="text" name="CustomerCode" [(ngModel)]="customer.CustomerCode"/></p>
+<p>UserName: <input type="text" name="CustomerName" [(ngModel)]="customer.CustomerName"/></p>
+<p>Amount: <input type="text" name="CustomerAmount" [(ngModel)]="customer.CustomerAmount"/></p>
+
+<p [ngClass]="{redBorder:true}">Is this Style?</p>
+<p [ngStyle]="{color:'blue'}">Is this also Style</p>
+
+<hr/>
+<app-lifecycle *ngIf="!delete" [bindable]="boundValue">
+    <p>{{test1}}</p>
+</app-lifecycle>
+
+<button (click)="delete=true">Click to delete</button>
+<button (click)="test1='Changed Value'">Click to change the value</button>
+<button (click)="boundValue=500">Click to change binding</button>

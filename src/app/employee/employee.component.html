@@ -1,0 +1,26 @@
+<a routerLink="/employeeadd" class="btn btn-secondary">Add New Employee</a><br/><br/>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Salary</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of employeeList">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.salary}}</td>
+            <td>
+                <a [routerLink]="['/employeedetails', x.id]">View Details</a><br/>
+
+                <a [routerLink]="['/employees']" (click)="deleteEmployee(x.id)">Delete Employee</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
